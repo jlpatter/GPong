@@ -6,4 +6,3 @@ func _ready():
 	my_list.append(Vector2(get_viewport_rect().size.x / 2.0, get_viewport_rect().size.y))
 	
 	points = my_list
-	print(points)
