@@ -22,10 +22,12 @@ func _physics_process(delta):
 	
 	if position.x < 0.0:
 		emit_signal("enemy_score")
+		direction.x = randf() * 2.0 - 1.0
 		position = start_position
 	
 	if position.x > get_viewport_rect().size.x:
 		emit_signal("player_score")
+		direction.x = randf() * 2.0 - 1.0
 		position = start_position
 	
 	move_and_slide(direction * SPEED * delta)
